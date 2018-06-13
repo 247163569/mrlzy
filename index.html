@@ -2,9 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <title>mrlzy</title>
-    <link rel="stylesheet" href="./static/normalize.css">
+    <link rel="shortcut icon" type="image/x-icon" href="static/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./static/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./static/iconfont/iconfont.css">
+    <!-- 使用rem布局,比例是100px=1rem -->
+    <script type="text/javascript">
+        fnResize()
+        window.onresize = function () {
+            fnResize()
+        }
+        function fnResize() {
+            var deviceWidth = document.documentElement.clientWidth || window.innerWidth
+            if (deviceWidth >= 750) {
+                deviceWidth = 750
+            }
+            if (deviceWidth <= 320) {
+                deviceWidth = 320
+            }
+            document.documentElement.style.fontSize = (deviceWidth / 7.5) + 'px'
+        }
+    </script>
   </head>
   <body>
     <div id="app"></div>
